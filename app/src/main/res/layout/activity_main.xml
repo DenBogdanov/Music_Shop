@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/music_shop">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="28sp"
+            android:rotation="-20"
+            android:fontFamily="@font/aclonica"
+            android:text="Sale -30%"
+            android:textColor="@android:color/white">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Item"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp">
+
+    </TextView>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <ImageView
+        android:src="@drawable/guitar"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/priseTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="Order prise"
+            android:layout_marginStart="20dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/priseTextView"
+            android:layout_below="@id/priseTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="0"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/currencyTextView"
+            android:layout_below="@id/priseTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="$"
+            android:layout_marginStart="4dp"
+            android:layout_toRightOf="@id/priseTextView"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/quantityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/priseTitleTextView"
+            android:text="Quantity"
+            android:layout_marginStart="110dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="5dp"
+            android:text="-"
+            android:layout_toRightOf="@id/currencyTextView"
+            android:layout_below="@id/quantityTitleTextView">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_below="@id/priseTitleTextView"
+            android:layout_toRightOf="@id/minusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="0"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/plusButton"
+            android:onClick="increaseQuantity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="+"
+            android:layout_toRightOf="@id/quantityTextView"
+            android:layout_below="@id/quantityTitleTextView">
+
+        </Button>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Cart"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/white">
+
+    </Button>
+
+</LinearLayout>
